@@ -5,7 +5,7 @@
 		<?php the_title(); ?>
 	</h1>
 
-	<p>You can take a tour of how MOMO by scrolling (mouse) or swiping (touch screen) below.</p>
+	<p>You can take a tour of MOMO by scrolling or swiping (touch screen) the panel below.</p>
 
 	<div class="guide-container">
 		<div class="guide-inner">

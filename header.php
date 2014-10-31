@@ -24,7 +24,7 @@ lang="en-GB"> <![endif]-->
 				<li><a href="<?php bloginfo('url'); ?>" aria-label="MOMO homepage"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/momo_logo.png" alt="MOMO homepage" /></a></li>
 				<li><a href="<?php bloginfo('url'); ?>/about">About MOMO</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/how-it-works">How it works</a></li>
-				<li><a class="service-link" href="#">Service MOMO</a></li>
+				<li><a class="service-link" href="<?php bloginfo('url'); ?>/young-people-momo-improves-service/">Service MOMO</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/blog">Blog</a></li>
 			</ul>
 		</nav>

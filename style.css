@@ -302,7 +302,7 @@ h1 + h2, h1 + p {
   font-family: Asap, sans-serif;
   font-style: italic;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.33em;
   text-align: center;
   margin-top: 0.5em;
 }
@@ -323,6 +323,11 @@ blockquote > * {
 
 blockquote p {
   font-style: italic;
+}
+
+[href*="uploads"] img {
+  display: block;
+  margin: 1.5em auto;
 }
 
 /**************************************************************
@@ -425,14 +430,25 @@ h3 a:hover, h3 a:focus {
   border-width: 2px;
 }
 
-.button-shaped {
+* + label {
+  margin-top: 1.5em !important;
+}
+
+.button-shaped, input[type="submit"] {
   background: #358272;
   color: #fff;
   font-family: 'Roboto Slab', sans-serif;
-  padding: 0.25em 0.5em;
+  padding: 0.33em 0.5em;
   font-size: 1.25em;
   border-radius: 0.25em;
   display: inline-block;
+  border: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.button-shaped:hover, input[type="submit"]:hover, .button-shaped:focus, input[type="submit"]:focus {
+  background: #222;
 }
 
 /**************************************************************
@@ -448,12 +464,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -637,6 +653,18 @@ heading eg.
   margin-top: -1.1em;
 }
 
+.post-navigation, .post-navigation ul {
+  background: transparent;
+}
+
+.post-navigation ul {
+  font-size: 0.8em;
+}
+
+.post-navigation li {
+  padding: 0.5em;
+}
+
 /**************************************************************
 
 BUTTONS
@@ -701,7 +729,7 @@ Basic form styling
 
 ***************************************************************/
 form * + * {
-  margin-top: 1em;
+  margin-top: 0.75em;
 }
 
 input, textarea, select {
@@ -743,6 +771,23 @@ label > * {
 * + [type="submit"] {
   margin-top: 1.5em;
 }
+
+label {
+  padding-bottom: 5px !important;
+}
+
+input[type="text"], input[type="email"], textarea {
+  box-shadow: inset 3px 3px 0 #ccc;
+  border-radius: 0.25em;
+  border: 2px solid #444;
+  padding: 1em;
+  color: #222;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-width: 3px;
+}
+
 /**************************************************************
 
 UTILITIES
@@ -777,6 +822,11 @@ UTILITIES
 
 .bigger {
   font-size: 1.25em;
+}
+
+.biggest {
+  font-size: 2em;
+  font-weight: bold;
 }
 
 /**************************************************************
@@ -823,11 +873,15 @@ LAYOUT
   margin-top: 0.85em;
 }
 
-.awards li {
+.awards li, .stars li {
   list-style: none;
 }
 
-.awards li:before {
+.stars li + li {
+  margin-top: 0.75em;
+}
+
+.awards li:before, .stars li:before {
   content: '\2605';
   font-size: 1.25em;
   vertical-align: middle;
@@ -859,7 +913,7 @@ LAYOUT
 }
 
 .contact h2 + * {
-  margin-top: 0.75em
+  margin-top: 0.25em
 }
 
 .contact li {
@@ -890,6 +944,10 @@ LAYOUT
 
 [role="contentinfo"] a {
   color: #fff;
+}
+
+.find-us * + * {
+  margin-top: 0;
 }
 
 /**************************************************************
@@ -1041,6 +1099,14 @@ GUIDE
   vertical-align: middle;
 }
 
+.boxed {
+  padding: 1.5em;
+  border-radius: 0.25em;
+  background: #E5E68E;
+  text-align: center;
+  margin: 2.25em 0;
+}
+
 /**************************************************************
 
 BLOG GRID
@@ -1052,6 +1118,14 @@ BLOG GRID
   margin: 0 1.5rem;
   padding-bottom: 30px;
   padding-bottom: 2.25rem;
+}
+
+.blog-grid li:first-child:before {
+  content: '\2605\0020Latest\0020\2605';
+  display: block;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 .blog-grid h2 {
@@ -1072,6 +1146,37 @@ BLOG GRID
   text-align: center;
   color: #666;
   font-size: 1.125em !important;
+}
+
+.tags h2 {
+  font-size: 1.75em
+}
+
+.tags {
+  padding-top: 1.5em;
+  border-top: 2px solid;
+}
+
+.tags ul {
+  text-align: center;
+}
+
+.tags li {
+  display: inline-block;
+  margin: 0 0.5em 0.5em;
+}
+
+.tags a {
+  border: 0;
+  background: #358272;
+  color: #fff;
+  padding: 0.25em 1em;
+  display: block;
+  border-radius: 1em;
+}
+
+.tags a:hover, .tags a:focus {
+  background: #222;
 }
 
 /**************************************************************
@@ -1176,9 +1281,13 @@ BREAKPOINTS
     margin: 0 auto;
   }
 
-}
+  .blog-grid li {
+    width: 100%;
+  }
 
-@media all and (max-width: 620px) {
+  .blog-grid li + li {
+    margin-top: 2.25em;
+  }
 
   .guide-inner {
     height: 200px;
@@ -1188,4 +1297,15 @@ BREAKPOINTS
     font-size: 0.9em;
   }
 
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    text-align: center;
+  }
+
 }
+

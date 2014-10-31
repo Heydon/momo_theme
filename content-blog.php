@@ -2,6 +2,7 @@
 	<h1>
 		<?php the_title(); ?>
 	</h1>
+	<p>All the latest news from Mind Of My Own HQ</p>
 </div>
 
 	<ul class="grid-3-columns blog-grid">

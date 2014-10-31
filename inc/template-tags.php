@@ -48,14 +48,14 @@ function _s_post_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', '_s' ); ?></h1>
-		<div class="nav-links">
+	<nav class="post-navigation" role="navigation">
+		<h2 class="screen-reader-text vh"><?php _e( 'More reading', '_s' ); ?></h2>
+		<ul>
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', '_s' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     '_s' ) );
+				previous_post_link( '<li>%link', _x( '<span class="meta-nav" aria-hidden="true">&larr;</span>&nbsp;%title</li>', 'Previous post link', '_s' ) );
+				next_post_link(     '<li>%link',     _x( '%title&nbsp;<span class="meta-nav" aria-hidden="true">&rarr;</span></li>', 'Next post link',     '_s' ) );
 			?>
-		</div><!-- .nav-links -->
+		</ul>
 	</nav><!-- .navigation -->
 	<?php
 }

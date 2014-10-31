@@ -14,14 +14,15 @@
 					<h2>Team MOMO</h2>
 					<p>Meet <a href="http://mindofmyown.org.uk/team-momo/">the folks</a> who made MOMO happen!</p>
 				</div>
-				<div>
+				<div class="find-us">
 					<h2>Find us in these places</h2>
 					<ul>
-						<li><a class="icon-mail" href="mailto:hello@mindofmyown.org.uk" target="_blank" aria-label="Email us"></a></li>
 						<li><a class="icon-facebook" href="https://www.facebook.com/pages/Mind-Of-My-Own/480130608769729" target="_blank" aria-label="MOMO on Facebook"></a></li>
 						<li><a class="icon-twitter" href="https://twitter.com/MindOfMyOwnApp" target="_blank" aria-label="Follow us on Twitter"></a></li>
 						<li><a class="icon-youtube" href="http://www.youtube.com/user/MindOfMyOwnApp?feature=mhee" target="_blank" aria-label="MOMO on Youtube"></a></li>
+						<li><a class="icon-mail" href="mailto:hello@mindofmyown.org.uk" target="_blank" aria-label="Email us"></a></li>
 					</ul>
+					<p class="bigger">Have a query? Use our <a href="<?php bloginfo('url'); ?>/contact">contact form</a></p>
 				</div>
 			</div>
 			<footer role="contentinfo">
