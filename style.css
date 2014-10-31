@@ -665,6 +665,14 @@ heading eg.
   padding: 0.5em;
 }
 
+.post-navigation a {
+  color: #358272;
+}
+
+.post-navigation a:hover, .post-navigation a:focus {
+  color: #222;
+}
+
 /**************************************************************
 
 BUTTONS
